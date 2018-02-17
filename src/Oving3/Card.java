@@ -13,15 +13,33 @@ public class Card {
 			this.type = type;
 		}
 		
-		if(cardValue > 13 && cardValue >= 0) {
+		if(cardValue > 13 || cardValue <= 0) {
 			throw new IllegalArgumentException("Kortverdi må være mellom 0 og 13");
 			}else {
 				this.cardValue = cardValue;
 		}
 	}
+	
+	public char getSuit() {
+		return this.type;
+	}
+	
+	public int getFace() {
+		return this.cardValue;
+	}
+	
+	
+	public String toString() {
+		return "" + getSuit() + getFace();
+	}
+	
+	
+	
 
 	public static void main(String[] args) {
-		Card c1 = new Card('S', 2);
+		Card c1 = new Card('S', 0);
+		
+	System.out.println(c1);
 
 	}
 
