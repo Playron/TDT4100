@@ -26,6 +26,16 @@ public class CardHand {
 		}
 	}
 	
+	public void addCards2(Card kortet) {
+		for(Card kortstokk : kort) {
+			if(kortstokk.getFace() == kortet.getFace() && kortstokk.getSuit() == kortet.getSuit()) {
+				throw new IllegalArgumentException("Kortet er der allerede");
+			}else {
+				kort.add(kortet);
+			}
+		}
+	}
+	
 	public Card play(int n) {
 		Card spillekort = kort.get(n);
 		kort.remove(spillekort);
@@ -42,6 +52,7 @@ public class CardHand {
 		hand.addCards(c2);
 		hand.play(1);
 		hand.addCards(c3);
+		hand.addCards2(c3);
 		
 
 	}
