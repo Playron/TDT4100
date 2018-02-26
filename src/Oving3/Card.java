@@ -2,6 +2,8 @@ package Oving3;
 
 public class Card {
 	
+	
+	
 	char type;
 	int cardValue;
 	
@@ -34,7 +36,7 @@ public class Card {
 	}
 	
 	
-	
+
 
 	public static void main(String[] args) {
 		Card c1 = new Card('S', 0);

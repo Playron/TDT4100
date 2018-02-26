@@ -42,9 +42,16 @@ public class CardDeck {
 		} 
 	}
 	
+	@Override
+	public String toString() {
+		return "[Deck " + kortstokk.toString().substring(1);
+	}
+	
 	public static void main(String[] args) {
-		CardDeck deck1 = new CardDeck(4);
+		CardDeck deck1 = new CardDeck(13);
 		System.out.println(deck1.getCard(12));
+		String test = "ABCDEFGHIJKLMNOPQRSTUWXYZ";
+				System.out.println(test.charAt(3));
 	}
 
 
